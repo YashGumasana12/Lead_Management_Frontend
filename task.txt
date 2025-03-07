@@ -1,0 +1,68 @@
+We want to assess your Next.js, Node.js, database, and API skills in a time-efficient way. You'll build a simple Lead Management API and a basic frontend to interact with it.
+
+
+
+Task: Build a Simple Lead Manager
+
+
+
+Requirements
+Backend (Node.js & Express)
+
+
+
+Set up a simple REST API with two endpoints:
+POST /leads → Add a new lead
+GET /leads → Fetch all leads
+Use MongoDB (Mongoose) or PostgreSQL (Prisma)
+Each lead should have:
+name (string, required)
+email (string, required, unique)
+status (enum: "New", "Engaged", "Proposal Sent", "Closed-Won", "Closed-Lost")
+createdAt (timestamp)
+
+
+
+Frontend (Next.js)
+A basic UI that:
+Displays the list of leads from the API
+Has a simple form to add a new lead
+
+
+
+Database
+Use MongoDB (Mongoose) or PostgreSQL (Prisma)
+Store and retrieve leads.
+Minimal Deployment (Optional)
+
+
+
+Run locally (npm run dev for both frontend & backend).
+Bonus: Deploy frontend to Vercel and backend to Railway/Render/Heroku (optional).
+
+
+
+- Submission
+GitHub Repo → Share your code
+README.md → How to run your project locally
+(Optional) Live Link → If deployed
+
+
+
+If we like your submission, we’ll invite you for a face-to-face chat. If you reach this stage, you have a strong chance of being hired.
+
+
+
+Drop your GitHub repo link when you're done!
+
+
+
+Deadline is tomorrow at 12pm but if we receive your work earlier and it is good quality then that also works in your favour.
+
+
+
+Thanks
+
+
+
+Helmut
