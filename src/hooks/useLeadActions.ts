@@ -7,15 +7,11 @@ export const useLeadActions = (
   onUpdateLead: (id: string, data: Partial<Lead>) => Promise<void>,
   onDeleteLead: (id: string) => Promise<void>
 ) => {
-  const [editingId, setEditingId] = useState<string | null>(null);
-  const [editStatus, setEditStatus] = useState<Lead["status"] | null>(null);
   const [updatingId, setUpdatingId] = useState<string | null>(null);
   const [deletingId, setDeletingId] = useState<string | null>(null);
   const [showActionsId, setShowActionsId] = useState<string | null>(null);
 
   const handleStatusChange = useCallback(async (id: string, newStatus: Lead["status"]) => {
-    setEditingId(id);
-    setEditStatus(newStatus);
     setUpdatingId(id);
 
     try {
@@ -23,8 +19,6 @@ export const useLeadActions = (
     } catch (error) {
       console.error("Error updating status:", error);
     } finally {
-      setEditingId(null);
-      setEditStatus(null);
       setUpdatingId(null);
     }
   }, [onUpdateLead]);
@@ -47,8 +41,6 @@ export const useLeadActions = (
   }, []);
 
   return {
-    editingId,
-    editStatus,
     updatingId,
     deletingId,
     showActionsId,

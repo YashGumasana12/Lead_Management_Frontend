@@ -9,7 +9,6 @@ import { api } from "../services/api";
 export const LeadList: React.FC = () => {
   const { leads, isLoading, error, refetchLeads } = useLeadContext();
   const {
-    editingId,
     updatingId,
     deletingId,
     showActionsId,

@@ -4,13 +4,14 @@ import { useState } from "react";
 import { LeadForm } from "@/components/LeadForm";
 import { LeadList } from "@/components/LeadList";
 import { useLeadContext } from "@/context/LeadContext";
+import { Lead } from "@/types/lead";
 
 export default function Home() {
   const { createLead } = useLeadContext();
   const [error, setError] = useState<string | null>(null);
   const [showErrorBanner, setShowErrorBanner] = useState(false);
 
-  const handleAddLead = async (lead: any) => {
+  const handleAddLead = async (lead: Omit<Lead, "_id" | "createdAt">) => {
     try {
       await createLead(lead);
       setError(null);
