@@ -37,7 +37,7 @@ export default function Home() {
       <div className="max-w-7xl mx-auto">
         {showErrorBanner && error && (
           <div className="fixed top-4 right-4 left-4 md:left-auto md:w-96 bg-white border-l-4 border-red-500 shadow-lg rounded-lg p-4 z-50 animate-slideDown">
-            <div className="flex items-start">
+            <div className="flex items-start space-x-3">
               <div className="flex-shrink-0">
                 <svg
                   className="h-5 w-5 text-red-500"
@@ -53,19 +53,17 @@ export default function Home() {
                   />
                 </svg>
               </div>
-              <div className="ml-3 w-full">
-                <div className="mt-1 text-sm text-gray-700">
-                  <p>{error}</p>
-                </div>
+              <div className="flex-1 pt-0.5">
+                <p className="text-sm text-gray-700 leading-5">{error}</p>
               </div>
               <button
                 type="button"
-                className="ml-auto flex-shrink-0 text-gray-400 hover:text-gray-600"
+                className="flex-shrink-0 ml-1 text-gray-400 hover:text-gray-600 focus:outline-none focus:ring-2 focus:ring-red-500 rounded-full p-1"
                 onClick={() => setShowErrorBanner(false)}
               >
                 <span className="sr-only">Close</span>
                 <svg
-                  className="h-5 w-5"
+                  className="h-4 w-4"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
